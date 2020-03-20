@@ -1,0 +1,16 @@
+﻿{% extends 'basic/main.html' %}
+
+{% block content %}
+    <div class="card text-center">
+        <div class="card-header">
+            {{product.price}}
+        </div>
+        <div class="card-body">
+            <h3 class="card-title">{{current_product.title}}</h3>
+            <h5 class="card-title">{{current_product.type.title}}</h5>
+            <a href="" class="btn btn-primary">Купить</a>
+        </div>
+        <div class="card-footer text-muted">
+            BARKER.STORE.CLUB
+    </div>
+{% endblock %}

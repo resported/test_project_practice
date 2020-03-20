@@ -1,0 +1,31 @@
+﻿body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    padding-top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 30px;
+    justify-content: center;
+    text-align: center;
+}

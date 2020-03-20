@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %} practice {% endblock %}</title>
+    <!--bootstrap last version-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!--basic fonts-->
+
+    <!--my css style-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/main.css'%}"/>
+
+</head>
+<body>
+    {% block header %}
+    <header class="header">
+        <section class="header-logo">
+            <a href="/">Barker</a>
+        </section>
+        <section class="header-gender">
+            <a href="/men">МУЖЧИНЫ</a>
+            <a href="/woman">ЖЕНЩИНЫ</a>
+        </section>
+        <section class="header-link">
+            <a href="/">КОЛЛЕКЦИИ</a>
+            <a href="/">ОТЗЫВЫ</a>
+            <a href="/">ПОДДЕРЖКА</a>
+            <a href="/">МАГАЗИНЫ</a>
+        </section>
+        <section class="header-search">
+            <input class="search" name="search" type="search" />
+            <button form="search">НАЙТИ</button>
+        </section>
+        <section class="header-icon">
+            <a href="/">1</a>
+            <a href="/">2</a>
+            <a href="/">3</a>
+        </section>
+    </header>
+    {% endblock %}
+
+    {% block content %}
+    <content class="content">
+        {% for product in products %}
+            {% include 'includes/product-card.html' %}
+        {% endfor %}
+    </content>
+    {% endblock %}
+
+    {% block fooer %}
+    <footer class="footer">
+    
+    </footer>
+    {% endblock %}
+</body>
+</html>

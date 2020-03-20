@@ -19,7 +19,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from decor.views import *
+from objects.views import *
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('', main),
+    path('/products/<str:slug>', current_product, name='current_product')
 ]
