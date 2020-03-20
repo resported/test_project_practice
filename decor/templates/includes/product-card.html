@@ -1,12 +1,18 @@
 <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
         <h3 class="card-title">{{product.price}}</h3>
         <h3 class="card-title">{{product.type.title}}</h3>
 
         <a href="" class="btn btn-primary">look</a>
-        <a href="{{product.current_product}}" class="btn btn-success">buy</a>
-
+        <form class="form-inline buy-product-form">
+            <div class="form-group">
+                <input type="number" class="form-control form-number"/>
+                <button data-product_slug="{{product.slug}}" data-product_price="{{product.price}}" data-product_title="{{product.title}}" type="submit" class="btn btn-success btn-buy">
+                    buy
+                </button>
+            </div>
+        </form>
     </div>
 </div>

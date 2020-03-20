@@ -5,6 +5,20 @@
     padding: 0px;
 }
 
+.header-icon img {
+    height: 18px;
+    width: auto;
+}
+
+.basket-icon {
+    position: relative;
+}
+
+.basket-icon-dd {
+    position: absolute;
+    left: -18px;
+}
+
 header {
     padding-top: 0px;
     width: 100%;

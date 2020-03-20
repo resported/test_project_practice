@@ -12,8 +12,11 @@
 
     <!--basic fonts-->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
     <!--my css style-->
-    <link type="text/css" rel="stylesheet" href="{% static 'css/main.css'%}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/main.css'%}" />
 
 </head>
 <body>
@@ -30,16 +33,20 @@
             <a href="/">КОЛЛЕКЦИИ</a>
             <a href="/">ОТЗЫВЫ</a>
             <a href="/">ПОДДЕРЖКА</a>
-            <a href="/">МАГАЗИНЫ</a>
         </section>
         <section class="header-search">
             <input class="search" name="search" type="search" />
             <button form="search">НАЙТИ</button>
         </section>
         <section class="header-icon">
-            <a href="/">1</a>
-            <a href="/">2</a>
-            <a href="/">3</a>
+            <div class="basket-icon">
+                <img src="{% static 'media/117623.png' %}" />
+                <ul class="basket-icon-dropdown">
+                    
+                </ul>
+            </div>
+            <img src="{% static 'media/stra.jpg' %}" />
+            <img src="{% static 'media/121693.png' %}" />
         </section>
     </header>
     {% endblock %}
