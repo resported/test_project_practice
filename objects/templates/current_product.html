@@ -3,14 +3,29 @@
 {% block content %}
     <div class="card text-center">
         <div class="card-header">
-            {{product.price}}
+            {{current_product.price}}
         </div>
         <div class="card-body">
             <h3 class="card-title">{{current_product.title}}</h3>
-            <h5 class="card-title">{{current_product.type.title}}</h5>
-            <a href="" class="btn btn-primary">Купить</a>
+            <h5 class="card-title">Цена: {{current_product.price}}</h5>
+            <h5 class="card-title">Тип: {{current_product.type.title}}</h5>
+
+            <form class="form-inline buy-product-form" action="{% url 'basket_adding' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="number" class="form-control form-number" />
+                </div>
+                <div class="form-group">
+                    <button data-product_slug="{{current_product.slug}}" data-product_price="{{current_product.price}}" data-product_title="{{current_product.title}}"
+                            type="submit" class="btn btn-success btn-buy">
+                        BUY
+                    </button>
+                </div>
+            </form>
+
         </div>
         <div class="card-footer text-muted">
             BARKER.STORE.CLUB
+        </div>
     </div>
 {% endblock %}

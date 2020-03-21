@@ -26,5 +26,6 @@ from objects.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main),
-    path('/products/<str:slug>', current_product, name='current_product')
+    path('products/<str:slug>', current_product, name='current_product'),
+    path('basket_adding/', basket_adding, name='basket_adding'),
 ]
